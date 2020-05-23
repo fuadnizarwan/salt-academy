@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 
 </head>
 
@@ -20,27 +21,35 @@
         <div class="container">
             <div class="row">
                 <div class="header-wrapper col-12 d-flex justify-content-between">
-                    <div class="header-logo">
-                        <img src="/assets/img/salt_logo.png">
+                    <div class="d-flex justify-content-between header-wrapper-mobile">
+                        <div class="header-logo align-self-center">
+                            <img src="/assets/img/salt_logo.png">
+                        </div>
+                        <div id="burger" class="burger align-self-center position-relative" onclick="openBurger()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
-                    <div class="header-action">
-                        <div class="header-options">Experential Learning?</div>
-                        <div class="header-options">Program To Join</div>
-                        <div class="header-options">Talk To Us</div>
+                    <div id="headeractive" class="header-action">
+                        <div class="header-options" onclick="scrollToasd('learning')">Experential Learning?</div>
+                        <div class="header-options" onclick="scrollToasd('program')">Program To Join</div>
+                        <div class="header-options" onclick="scrollToasd('talktous')">Talk To Us</div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="main-banner">
+    <section class="main-banner position-relative">
         <div class="banner-info">
             Premium guided online learning
         </div>
     </section>
-    <section class="experential">
+    <section class="experential gradient-1" id="learning">
         <div class="section-title">Experential Learning</div>
-        <div class="container section-content">
-            <div class="row">
+        <div class="container">
+            <div class="row section-content">
                 <div class="col-6 content-box border-right-experential border-bottom-experential">
                     <img src="/assets/img/teacher.svg">
                     <div class="title">
@@ -80,9 +89,9 @@
             </div>
         </div>
     </section>
-    <section class="primary-program">
+    <section class="primary-program" id="program">
         <div class="section-title">Primary Program</div>
-        <div class="container section-content">
+        <div class="container section-content gradient-2">
             <div class="content-box">
                 <div class="d-flex">
                     <div>
@@ -98,6 +107,8 @@
                     <div class="cta-2">TALK TO US</div>
                 </div>
             </div>
+        </div>
+        <div class="container section-content">
             <div class="content-box">
                 <div class="d-flex">
                     <div>
@@ -118,13 +129,13 @@
     <section class="primary-program professional-program">
         <div class="section-title">Professional Program</div>
         <div class="container section-content">
-            <div class="row">
-                <div class="content-box col-6">
+            <div class="row content-wrapper">
+                <div class="content-box col-6 border-right-experential">
                     <div class="d-flex">
                         <div>
                             <img src="/assets/img/developer.svg">
                         </div>
-                        <div>
+                        <div class="info">
                             <div class="d-flex title">
                                 <div>Agile Scrum</div>
                             </div>
@@ -141,7 +152,7 @@
                             <div class="d-flex title">
                                 <div>Leadership and Communication</div>
                             </div>
-                            <div>Major competencies needed to perform your career. Learn about personal and team management.</div>
+                            <div class="info">Major competencies needed to perform your career. Learn about personal and team management.</div>
                         </div>
                     </div>
                 </div>
@@ -154,31 +165,33 @@
             </div>
         </div>
     </section>
-    <section class="talk-us">
+    <section class="talk-us" id="talktous">
         <div class="section-title">Talk To Us</div>
-        <div class="container section-content">
-            <h3 class="text-center mb-5 font-weight-bold">
-                Request more information by contacting us
-            </h3>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="/assets/img/whatsapp.svg">
-                    <h5>0812 880 7890</h5>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="/assets/img/mail.svg">
-                    <h5>hello@saltacademy.id</h5>
-                </div>
-                <div class="col-md-4 text-center">
-                    <img src="/assets/img/instagram.svg">
-                    <h5>@saltacademy.id</h5>
+        <div class="container">
+            <div class="section-content">
+                <h3 class="text-center mb-5 font-weight-bold">
+                    Request more information by contacting us
+                </h3>
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img src="/assets/img/whatsapp.svg">
+                        <h5>0812 880 7890</h5>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="/assets/img/mail.svg">
+                        <h5>hello@saltacademy.id</h5>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="/assets/img/instagram.svg">
+                        <h5>@saltacademy.id</h5>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="ready">
         <div class="section-title">Ready To Apply</div>
-        <div class="container section-content">
+        <div class="container section-content gradient-1">
             <div class="row pt-5 pb-5">
                 <div class="col-md-6">
                     <h3 class="font-weight-bold">New batch open!</h3>
@@ -188,8 +201,8 @@
                     <h5 class="font-weight-bold text-right align-self-center">
                         <span class="download-button d-flex">
                             <div class="align-self-center">DOWNLOAD ADMISSION FORM</div>
-                            <div class="download-icon">
-                                <img src="/assets/img/download.svg">
+                            <div class="download-icon d-flex justify-content-center">
+                                <img src="/assets/img/download.svg" class="align-self-center">
                             </div>
                         </span>
                     </h5>
