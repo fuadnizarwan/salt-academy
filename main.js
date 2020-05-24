@@ -28,7 +28,11 @@ function scrollToasd(id) {
     $('#burger').removeClass('open');
     $('#headeractive').removeClass('header-burger-active');
     $('body').removeClass('overflow-hidden');
+    let position = 0;
+    if (id !== 0) {
+        position = $("#" + id).offset().top - 60;
+    }
     $('html,body').animate({
-        scrollTop: $("#" + id).offset().top - 60
+        scrollTop: position
     }, 'slow');
 }
