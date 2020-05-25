@@ -173,12 +173,12 @@ header {
 }
 
 .main-banner {
-    min-height: 60%;
-    height: calc( 100% - 294px);
-    background-image: url(/assets/img/banner.jpg);
+    min-height: 40%;
+    height: calc( 100% - 266px);
+    background-image: url(/assets/img/banner.png);
     background-size: cover;
     background-position: center;
-    padding-top: 76px;
+    padding-top: 60px;
 }
 
 .section-title {
@@ -221,8 +221,8 @@ header {
     border-bottom: solid 1px #FFFFFF80;
 }
 
-.border-left-experential {
-    border-left: solid 1px #FFFFFF80;
+.border-top-experential {
+    border-top: solid 1px #FFFFFF80;
 }
 
 .primary-program .content-box {
@@ -431,7 +431,6 @@ footer img {
     }
     .main-banner {
         height: 40%;
-        padding-top: 60px;
     }
     .section-title {
         font-size: 18px;
