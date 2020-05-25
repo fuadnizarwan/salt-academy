@@ -344,7 +344,7 @@ footer img {
     background-image: linear-gradient(0deg, #733380 8%, #8A2D7C 76%);
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 991px) {
     body {
         line-height: 100%;
     }
